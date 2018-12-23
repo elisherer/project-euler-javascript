@@ -1,3 +1,4 @@
+const assert = require('assert');
 const answer = require('../answers.js')[1];
 
 /**
@@ -15,5 +16,5 @@ const sumOfAllMultiplesOf3Or5Under = n => {
   return sum;
 };
 
-console.assert(sumOfAllMultiplesOf3Or5Under(10) === 23, "Provided test didn't pass");
-console.assert(sumOfAllMultiplesOf3Or5Under(1000) === answer, "Answer didn't pass");
+assert.strictEqual(sumOfAllMultiplesOf3Or5Under(10), 23);
+assert.strictEqual(sumOfAllMultiplesOf3Or5Under(1000), answer);
